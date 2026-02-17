@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function num(...numbers) {
+            console.log(numbers);
+        }
+        num(1,2,3,4,5,6,7,8,9,10);
+
+        // another e4xample
+        function sum(...nums){
+            let total = 0;
+
+            for (let n of nums) {
+                total += n;
+            }
+            return total;
+        }
+        console.log(sum(5,5,10,10));
+        console.log(sum(1,2,3,4,5));
+
+        // another example
+        function register(name, email, ...others){
+            console.log(name);
+            console.log(email);
+            console.log(others);
+        }
+        register('Kabir', 'kabir@gmail.com', 'Dhaka', 'Bangladesh')
+    </script>
+</body>
+</html>

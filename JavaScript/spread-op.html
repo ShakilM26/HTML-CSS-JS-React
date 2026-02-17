@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // examplw with array
+        const nums1 = [1,2,3];
+        const nums2 = [4,5];
+        const allNums = [...nums1, ...nums2]
+        console.log(allNums)
+
+        // object example
+        const user = {
+            name: 'Kabir',
+            city: 'Dhaka'
+        }
+        const updateUser = {
+            ...user,
+            position: 'Front-end Developer',
+            company: 'ABC123'
+        }
+        console.log(updateUser)
+    </script>
+</body>
+</html>

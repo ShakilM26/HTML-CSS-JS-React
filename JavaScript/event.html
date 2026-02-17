@@ -1,23 +1,48 @@
- <!-- Inline Event
+ <!-- mouse Event 
 
-<html>
-    <body>
-        <h2>JavaScript Events</h2>
-        <p>In HTML, Event Handling is Important.</p>
-        <p id="demo"></p>
-        <button onclick="sayHello()">Click Me</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+   <div id="box" style="width: 150px; height: 150px; background: yellow;"></div>
+   <script>
+    let box = document.getElementById('box');
 
-        <script>
-        function sayHello() {
-            alert('Hello from JavaScript Event');
-        }
-        </script>
-        <!-- <script src="today.js"></script> -->
-    </body>
-</html>
- -->
+    box.addEventListener('mouseover', function() {
+        box.style.background = 'green';
+    });
 
- <!-- addEventListener -->
+    box.addEventListener('mouseout', function() {
+        box.style.background = 'yellow';
+    })
+   </script>
+</body>
+</html> -->
+
+<!-- Keyboard Event
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputBox">
+    ><script>
+        kb = document.getElementById('inputBox');
+        
+        kb.addEventListener('keydown', function() {
+            console.log('key pressed');
+        });
+    </script>
+</body>
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +53,10 @@
 <body>
     <button id="btn">Click</button>
     <script>
-        document.getElementById('btn').addEventListener('click', function() {
-            alert('Button Clicked')
-        })
+    document.getElementById("btn").addEventListener("click", function (event) {
+    console.log(event);
+    });
     </script>
+
 </body>
 </html>

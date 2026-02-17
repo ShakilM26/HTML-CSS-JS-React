@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greet(city, country) {
+            console.log(`Hi ${this.name} from ${city}, ${country}`)
+    }
+
+    const user = {name: "Shakil"};
+    greet.call(user, "Dhaka", "BD"); // call 
+    greet.apply(user, ["Rajshahi", "BD"]); // call with array 
+
+    const newGreet = greet.bind(user, "Nazipur", "BD")
+    newGreet();
+    </script>
+</body>
+</html>
